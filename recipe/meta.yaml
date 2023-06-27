@@ -1,5 +1,5 @@
 {% set name = "OpenMiChroM" %}
-{% set version = "1.0.6" %}
+{% set version = "1.0.7" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/OpenMiChroM-{{ version }}.tar.gz
-  sha256: 7e04eff619c64207083e34e6007fdabb326d89a4d462e0f2f761675db8f15ac6
+  sha256: 2af4b1fa0da26e372bc520a1e3e118aa302e6b19457cb3de489e6626056857da
 
 build:
   number: 0
