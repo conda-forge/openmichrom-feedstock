@@ -1,6 +1,6 @@
 {% set name = "OpenMiChroM" %}
 {% set version = "1.1.0" %}
-{% set data = load_data('https://pypi.org/pypi/{{ name }}/{{ version }}/json') %}
+{% set data = load_json('https://pypi.org/pypi/{{ name }}/{{ version }}/json') %}
 {% set sdist = data['urls'] | selectattr('packagetype', 'equalto', 'sdist') | first %}
 {% set url = sdist['url'] %}
 {% set sha256 = sdist['digests']['sha256'] %}
