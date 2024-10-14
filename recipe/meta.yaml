@@ -17,6 +17,7 @@ build:
 
 requirements:
   host:
+    - openmm
     - h5py
     - numpy
     - pandas
@@ -25,6 +26,7 @@ requirements:
     - scikit-learn
     - scipy
   run:
+    - openmm
     - h5py
     - numpy
     - pandas
