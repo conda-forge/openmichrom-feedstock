@@ -6,7 +6,7 @@ package:
   version: "{{ version }}"
 
 source:
-  url: "https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
+  url: "https://files.pythonhosted.org/packages/e5/7c/16223eb7d05efa20f8cb1061f287fc35ed2c397a15cc959d02f10b8e6a03/openmichrom-1.1.0.tar.gz"
   sha256: a2cd3ae826b0af507dc68b0870d25cbf7835e2954e9c96c14f0de33d43aadf00
 
 build:
