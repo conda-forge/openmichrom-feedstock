@@ -37,9 +37,6 @@ requirements:
 test:
   imports:
     - OpenMiChroM
-    - tests
-  commands:
-    - CLINAME --help
 
 about:
   home: https://ndb.rice.edu/Open-MiChroM
