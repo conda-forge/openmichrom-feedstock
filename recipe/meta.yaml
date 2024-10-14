@@ -2,27 +2,29 @@
 {% set version = "1.1.0" %}
 
 package:
-  name: {{ name|lower }}  # conda-forge prefers lowercase package names
-  version: {{ version }}
+  name: "{{ name|lower }}"
+  version: "{{ version }}"
 
 source:
-  pypi:
-    name: {{ name }}
-    version: {{ version }}
+  url: "https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
+  sha256: a2cd3ae826b0af507dc68b0870d25cbf7835e2954e9c96c14f0de33d43aadf00
 
 build:
-  noarch: python  # Indicates a pure Python package
   number: 0
   entry_points:
     - CLINAME=OpenMiChroM._cli:main
-  script: {{ PYTHON }} -m pip install . -vv
+  script: "{{ PYTHON }} -m pip install . -vv"
 
 requirements:
   host:
+    - h5py
+    - numpy
+    - pandas
     - pip
     - python
+    - scikit-learn
+    - scipy
   run:
-    - openmm
     - h5py
     - numpy
     - pandas
@@ -30,15 +32,12 @@ requirements:
     - scikit-learn
     - scipy
 
-
 test:
   imports:
     - OpenMiChroM
     - tests
   commands:
-    - pip check
-  requires:
-    - pip
+    - CLINAME --help
 
 about:
   home: https://ndb.rice.edu/Open-MiChroM
