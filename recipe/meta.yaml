@@ -10,7 +10,7 @@ source:
   sha256: a2cd3ae826b0af507dc68b0870d25cbf7835e2954e9c96c14f0de33d43aadf00
 
 build:
-  number: 1
+  number: 2
   noarch: python
   entry_points:
     - CLINAME=OpenMiChroM._cli:main
