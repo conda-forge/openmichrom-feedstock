@@ -23,7 +23,7 @@ requirements:
     - numpy
     - pandas
     - pip
-    - python
+    - python {{ python_min }}
     - scikit-learn
     - scipy
   run:
@@ -31,11 +31,13 @@ requirements:
     - h5py
     - numpy
     - pandas
-    - python
+    - python >={{ python_min }}
     - scikit-learn
     - scipy
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - OpenMiChroM
 
